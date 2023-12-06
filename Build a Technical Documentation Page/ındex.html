@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>JS Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+            <li><a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a></li>
+            <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+            <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+            <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+            <li><a class="nav-link" href="#Constants">Constants</a></li>
+            <li><a class="nav-link" href="#Data_types">Data types</a></li>
+            <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>
+            <li><a class="nav-link" href="#while_statement">while statement</a></li>
+            <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>JavaScript, platformlar arası, nesne yönelimli bir kodlama dilidir. Küçük ve hafif bir dildir. Bir
+                    ana bilgisayar ortamında (örneğin bir web tarayıcısı), JavaScript, onlar üzerinde programlı kontrol
+                    sağlamak için ortamındaki nesnelere bağlanabilir.</p>
+                <p>JavaScript, Dizi, Tarih ve Matematik gibi standart bir nesne kitaplığı ile operatörler, kontrol
+                    yapıları ve ifadeler gibi temel dil öğeleri kümesini içerir. Temel JavaScript, ek nesnelerle
+                    desteklenerek çeşitli amaçlarla genişletilebilir; Örneğin:</p>
+                <ul>
+                    <li>İstemci tarafı JavaScript, bir tarayıcıyı ve onun Belge Nesne Modelini (DOM) kontrol etmek için
+                        nesneler sağlayarak çekirdek dili genişletir. Örneğin, istemci tarafı uzantıları, bir
+                        uygulamanın bir HTML formuna öğeler yerleştirmesine ve fare tıklamaları, form girişi ve sayfada
+                        gezinme gibi kullanıcı etkinliklerine yanıt vermesine olanak tanır.</li>
+                    <li>Sunucu tarafı JavaScript, bir sunucuda JavaScript'in çalıştırılmasıyla ilgili nesneler
+                        sağlayarak çekirdek dili genişletir. Örneğin, sunucu tarafı uzantıları, bir uygulamanın bir
+                        veritabanıyla iletişim kurmasına, bir uygulamadan diğerine bilgi sürekliliği sağlamasına veya
+                        bir sunucuda dosya manipülasyonları gerçekleştirmesine olanak tanır.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="What_you_should_already_know">
+            <header>What you should already know</header>
+            <article>
+                <p>Bu kılavuzda aşağıdaki temel bilgilere sahip olduğunuz varsayılmaktadır:</p>
+                <ul>
+                    <li>Bu kılavuzda aşağıdaki temel bilgilere sahip olduğunuz varsayılmaktadır:</li>
+                    <li>HyperText Markup Language (HTML) hakkında iyi düzeyde çalışma bilgisi.</li>
+                    <li>Biraz programlama deneyimi. Programlama konusunda yeniyseniz, ana sayfada bağlantısı verilen
+                        JavaScript ile ilgili eğitimlerden birini deneyin.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="JavaScript_and_Java">
+            <header>JavaScript and Java</header>
+            <section>
+                <p>JavaScript ve Java bazı yönlerden benzer ancak bazı yönlerden temelde farklıdır. JavaScript dili
+                    Java'ya benzer ancak Java'nın statik yazımına ve güçlü tür kontrolüne sahip değildir. JavaScript,
+                    çoğu Java ifadesi sözdizimini, adlandırma kurallarını ve temel kontrol akışı yapılarını takip eder;
+                    bu nedenle, LiveScript'ten JavaScript'e yeniden adlandırılmıştır.</p>
+                <p>Java'nın bildirimlerle oluşturulan sınıflardan oluşan derleme zamanı sisteminin aksine, JavaScript
+                    sayısal, Boolean ve dize değerlerini temsil eden az sayıda veri türüne dayalı bir çalışma zamanı
+                    sistemini destekler. JavaScript, daha yaygın olan sınıf tabanlı nesne modeli yerine prototip tabanlı
+                    bir nesne modeline sahiptir. Prototip tabanlı model dinamik miras sağlar; yani miras alınan şey, tek
+                    tek nesnelere göre değişebilir. JavaScript ayrıca herhangi bir özel bildirim gereksinimi olmayan
+                    işlevleri de destekler. İşlevler, gevşek yazılmış yöntemler olarak yürütülen nesnelerin özellikleri
+                    olabilir.</p>
+                <p>JavaScript, Java'ya kıyasla oldukça serbest biçimli bir dildir. Tüm değişkenleri, sınıfları ve
+                    yöntemleri bildirmeniz gerekmez. Yöntemlerin genel mi, özel mi yoksa korumalı mı olduğu konusunda
+                    endişelenmenize ve arayüzleri uygulamanıza gerek yoktur. Değişkenler, parametreler ve işlev dönüş
+                    türleri açıkça yazılmaz.</p>
+            </section>
+        </section>
+
+        <section class="main-section" id="Hello_world">
+            <header>Hello world</header>
+            <article>
+                <p>JavaScript yazmaya başlamak için Scratchpad'i açın ve ilk "Merhaba dünya" JavaScript kodunuzu yazın:</p>
+                <code>
+                    function greetMe(yourName) { alert("Hello " + yourName); }
+                    <br>
+                    greetMe("World");
+                </code>
+                <p>Peddeki kodu seçin ve tarayıcınızda açılmasını izlemek için Ctrl+R tuşlarına basın!</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <article>
+               <p>Değişkenleri uygulamanızdaki değerler için sembolik adlar olarak kullanırsınız. Tanımlayıcı adı verilen değişkenlerin adları belirli kurallara uygundur.</p>
+               <p>Bir JavaScript tanımlayıcısı bir harfle, alt çizgiyle (_) veya dolar işaretiyle ($) başlamalıdır; sonraki karakterler de rakam (0-9) olabilir. JavaScript büyük/küçük harfe duyarlı olduğundan, harfler "A" ile "Z" arası karakterleri (büyük harf) ve "a" ile "z" arası karakterleri (küçük harf) içerir.</p>
+               <p>Tanımlayıcılarda ISO 8859-1 veya å ve ü gibi Unicode harfleri kullanabilirsiniz. Unicode kaçış dizilerini tanımlayıcılarda karakter olarak da kullanabilirsiniz. Yasal adlara örnek olarak Number_hits, temp99 ve _name verilebilir.</p>  
+            </article>           
+        </section>
+        
+<!-- bundan sonrası isteğe bağlı -->
+        <section class="main-section" id="Declaring_variables">
+            <header>Declaring variables</header>
+            <article>
+                <p>Bir değişkeni üç şekilde bildirebilirsiniz:</p>
+                <p>
+                    Var anahtar kelimesiyle. Örneğin,
+                    <code>var x = 42.</code>
+                    Bu sözdizimi hem yerel hem de global değişkenleri bildirmek için kullanılabilir.
+                </p>
+                <p>
+                    Bu sözdizimi hem yerel hem de global değişkenleri bildirmek için kullanılabilir.
+                    <code>x = 42.</code>
+                    Bu her zaman global bir değişken bildirir. Sıkı bir JavaScript uyarısı oluşturur. Bu varyantı kullanmamalısınız.
+                </p>
+                <p>
+                    Let anahtar kelimesiyle. Örneğin,
+                    <code>let y = 13.</code>
+                    Bu sözdizimi bir blok kapsamı yerel değişkenini bildirmek için kullanılabilir. Aşağıdaki Değişken kapsamına bakın.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Variable_scope">
+            <header>Variable scope</header>
+            <article>
+                <p>Herhangi bir işlevin dışında bir değişken bildirdiğinizde buna global değişken denir, çünkü geçerli belgedeki diğer kodlarda kullanılabilir. Bir işlev içinde bir değişken bildirdiğinizde, buna yerel değişken denir çünkü yalnızca o işlev içinde kullanılabilir.</p>
+                <p>ECMAScript 2015'ten önceki JavaScript'in blok ifadesi kapsamı yoktur; bunun yerine, bir blok içinde bildirilen bir değişken, bloğun içinde bulunduğu işleve (veya genel kapsama) göre yereldir. Örneğin, aşağıdaki kod 5'i günlüğe kaydedecektir, çünkü x'in kapsamı, bu durumda bir if ifadesi olan blok değil, x'in içinde bildirildiği işlevdir (veya genel bağlamdır).</p>
+                <code>if (true) { var x = 5; } console.log(x); // 5</code>
+                <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
+                <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined</code>
+            </article>
+        </section>
+
+        <section class="main-section" id="Global_variables">
+            <header>Global variables</header>
+            <article>
+                <p>Global değişkenler aslında global nesnenin özellikleridir. Web sayfalarında global nesne window'dur, dolayısıyla window.variable sözdizimini kullanarak global değişkenleri ayarlayabilir ve bunlara erişebilirsiniz.</p>
+                <p>Sonuç olarak, bir pencere veya çerçevede bildirilen global değişkenlere, pencere veya çerçeve adını belirterek başka bir pencere veya çerçeveden erişebilirsiniz. Örneğin, bir belgede telefonNumber adlı bir değişken bildirilmişse, bu değişkene bir iframe'den parent.phoneNumber olarak başvurabilirsiniz.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Constants">
+            <header>Constants</header>
+            <article>
+                <p>const anahtar sözcüğüyle salt okunur, adlı bir sabit oluşturabilirsiniz. Sabit tanımlayıcının sözdizimi değişken tanımlayıcıyla aynıdır: bir harfle, alt çizgiyle veya dolar işaretiyle başlamalıdır ve alfabetik, sayısal veya alt çizgi karakterleri içerebilir.</p>
+                <code>const PI = 3.14;</code>
+                <p>Bir sabit, atama yoluyla değeri değiştiremez veya komut dosyası çalışırken yeniden bildirilemez. Bir değere başlatılması gerekir.</p>
+                <p>Sabitlere ilişkin kapsam kuralları, izin blok kapsam değişkenlerine ilişkin kurallarla aynıdır. Eğer const anahtar sözcüğü atlanırsa tanımlayıcının bir değişkeni temsil ettiği varsayılır.</p>
+                <p>Aynı kapsamdaki bir işlev veya değişkenle aynı ada sahip bir sabit bildiremezsiniz. Örneğin:</p>
+                <codep>
+                    // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
+                    WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
+                    //statements }
+                </codep>
+                <p>Ancak nesne öznitelikleri korunmadığından aşağıdaki ifade sorunsuz olarak yürütülür.</p>
+                <code>
+                    const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+                    "otherValue";
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="Data_types">
+            <header>Data types</header>
+            <article>
+                <p>En son ECMAScript standardı yedi veri türünü tanımlar:</p>
+                <ul>
+                    <li>
+                        <p>İlkel olan altı veri türü:</p>
+                        <ul>
+                            <li>Boolean. true ve false.</li>
+                            <li>hükümsüz. Boş bir değeri belirten özel bir anahtar kelime. JavaScript büyük/küçük harfe duyarlı olduğundan null, Null, NULL veya başka herhangi bir değişkenle aynı değildir.</li>
+                            <li>Tanımsız. Değeri tanımsız olan üst düzey bir özellik.</li>
+                            <li>Number. 42 or 3.14159.</li>
+                            <li>String. "Howdy"</li>
+                            <li>Sembol (ECMAScript 2015'te yeni). Örnekleri benzersiz ve değişmez olan bir veri türü.</li>
+                        </ul>
+                    </li>
+                    <li>ve Object</li>
+                </ul>
+                <p>Bu veri türleri nispeten küçük miktarlarda olsa da uygulamalarınızla faydalı işlevler gerçekleştirmenizi sağlar. Nesneler ve işlevler dilin diğer temel öğeleridir. Nesneleri değerler için adlandırılmış kaplar olarak, işlevleri ise uygulamanızın gerçekleştirebileceği prosedürler olarak düşünebilirsiniz.</p>
+            </article>
+        </section>
+        <section class="main-section" id="if...else_statement">
+            <header>if...else statement</header>
+            <article>
+                <p>Mantıksal bir koşulun doğru olması durumunda bir ifadeyi yürütmek için if ifadesini kullanın. Koşul yanlışsa bir ifadeyi yürütmek için isteğe bağlı else cümleciğini kullanın. Bir if ifadesi aşağıdaki gibi görünür:</p>
+                <code>if (condition) { statement_1; } else { statement_2; }</code>
+                <p>koşul, doğru veya yanlış olarak değerlendirilen herhangi bir ifade olabilir. Neyin doğru ve yanlış olarak değerlendirildiğine ilişkin bir açıklama için Boolean'a bakın. Koşul doğru olarak değerlendirilirse ifade_1 yürütülür; aksi halde ifade_2 yürütülür. ifade_1 ve ifade_2, daha fazla iç içe geçmiş if ifadeleri de dahil olmak üzere herhangi bir ifade olabilir.</p>
+                <p>Birden fazla koşulun sırayla test edilmesini sağlamak için else if kullanarak ifadeleri aşağıdaki gibi birleştirebilirsiniz:</p>
+                <code>if (condition_1) { statement_1; } else if (condition_2) {
+                    statement_2; } else if (condition_n) { statement_n; } else {
+                    statement_last; }</code>
+                <p>Birden fazla koşulun olması durumunda yalnızca doğru olarak değerlendirilen ilk mantıksal koşul yürütülür. Birden fazla ifadeyi yürütmek için bunları bir blok ifadesi ({ ... }) içinde gruplayın. Genel olarak, özellikle if ifadelerini iç içe yerleştirirken her zaman blok ifadelerini kullanmak iyi bir uygulamadır:</p>
+                <code>if (condition) { statement_1_runs_if_condition_is_true;
+                    statement_2_runs_if_condition_is_true; } else {
+                    statement_3_runs_if_condition_is_false;
+                    statement_4_runs_if_condition_is_false; }</code>
+                <p>Koşullu ifadelerde basit atamaların kullanılmaması tavsiye edilir çünkü koda bakıldığında atama eşitlikle karıştırılabilir. Örneğin aşağıdaki kodu kullanmayın:</p>
+                <code>if (x = y) { /* statements here */ }</code>
+                <p>Bir atamayı koşullu bir ifadede kullanmanız gerekiyorsa, yaygın bir uygulama, atamanın etrafına ek parantez koymaktır. Örneğin:</p>
+                <code>if ((x = y)) { /* statements here */ }</code>
+            </article>
+        </section>
+        <section class="main-section" id="while_statement">
+            <header>while statement</header>
+            <article>
+                <p>Bir while ifadesi, belirtilen bir koşul doğru olarak değerlendirildiği sürece ifadelerini yürütür. Bir süre ifadesi aşağıdaki gibi görünür:</p>
+                <code>while (condition) statement</code>
+                <p>Koşul yanlış olursa, döngü içindeki ifadenin yürütülmesi durdurulur ve kontrol, döngüyü takip eden ifadeye geçer.</p>
+                <p>Koşul testi, döngüdeki ifade yürütülmeden önce gerçekleşir. Koşul doğru dönerse ifade yürütülür ve koşul yeniden test edilir. Koşul false değerini döndürürse yürütme durdurulur ve kontrol while ifadesini takip eden ifadeye aktarılır.</p>
+                <p>Birden fazla ifadeyi yürütmek için, bu ifadeleri gruplandırmak üzere bir blok ifadesi ({ ... }) kullanın.</p>
+                <p>Örnek:</p>
+                <p>Aşağıdaki while döngüsü, n üçten küçük olduğu sürece yinelenir:</p>
+                <code>var n = 0; var x = 0; while (n < 3) { n++; x += n; }</code>
+                <p>Her yinelemede döngü n değerini artırır ve bu değeri x'e ekler. Bu nedenle x ve n aşağıdaki değerleri alır:</p>
+                <ul>
+                    <li>İlk geçişten sonra: n = 1 ve x = 1</li>
+                    <li>İkinci geçişten sonra: n = 2 ve x = 3</li>
+                    <li>Üçüncü geçişten sonra: n = 3 ve x = 6</li>
+                </ul>
+                <p>Üçüncü geçiş tamamlandıktan sonra n < 3 koşulu artık doğru olmadığı için döngü sona erer.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Function_declarations">
+            <header>Function declarations</header>
+            <article>
+                <p>Bir işlev tanımı (aynı zamanda işlev bildirimi veya işlev ifadesi olarak da adlandırılır), function anahtar sözcüğünden ve ardından gelenlerden oluşur:</p>
+                <ul>
+                    <li>Fonksiyonun adı.</li>
+                    <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+                    <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+                </ul>
+                <p>Örneğin, aşağıdaki kod kare adında basit bir işlevi tanımlar:</p>
+                <code>function square(number) { return number * number; }</code>
+                <p>Kare fonksiyonu sayı adı verilen bir argüman alır. İşlev, işlevin bağımsız değişkeninin (yani sayının) kendisiyle çarpılarak döndürülmesini söyleyen bir ifadeden oluşur. Return deyimi, işlevin döndürdüğü değeri belirtir</p>
+                <code>function square(number) { return number * number; }</code>
+                <p>Kare fonksiyonu sayı adı verilen bir argüman alır. İşlev, işlevin bağımsız değişkeninin (yani sayının) kendisiyle çarpılarak döndürülmesini söyleyen bir ifadeden oluşur. Return deyimi, işlevin döndürdüğü değeri belirtir.</p>
+                <code>return number * number;</code>
+                <p>Temel parametreler (sayı gibi) işlevlere değere göre aktarılır; değer fonksiyona iletilir, ancak fonksiyon parametrenin değerini değiştirirse bu değişiklik global olarak veya çağıran fonksiyona yansımaz.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>Bu sayfadaki tüm belgeler şuradan alınmıştır: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

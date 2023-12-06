@@ -1,0 +1,65 @@
+*{
+    font-family:  'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    /* font-size: 1.6rem; */
+    line-height: 1.5;
+    /* text-align: center; */
+    /* color: #333; */
+    margin: 0;
+}
+
+
+#main{
+    margin: 30px 8px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #eee;
+}
+#img-div{
+    display: block;
+    background: white;
+    padding: 10px;
+    margin: 0px;
+    max-width: 100%; /* Resmin maksimum genişliği, eğer ekran genişliğinden daha küçükse bu genişliği alır */
+    height: auto; /* Yüksekliği otomatik olarak ayarla, oranı korur */
+}
+#image {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    margin:  0 auto;
+    
+}
+#img-caption{
+    display: block;
+    text-align: center;
+
+}
+
+#headline{
+    display: block;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+ul{
+    max-width: 550px;
+    text-align: left;
+    margin: 0 auto;
+}
+li{
+    
+    margin: 0 auto 50px auto;
+}
+
+#blockquote{
+    max-width: 550px;
+    text-align: left;
+    margin: 0 auto;
+    margin: 0 auto 50px auto;
+}
+#link{
+    display: block;
+    text-align: center;
+
+    margin: 0 auto;
+}

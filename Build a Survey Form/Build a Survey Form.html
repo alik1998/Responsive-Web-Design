@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--color-white);
+            margin: 0;
+            color: #fff;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: var(--color-darkblue);
+            background-image: linear-gradient(115deg,
+                    rgba(58, 58, 158, 0.8),
+                    rgba(136, 136, 206, 0.7)),
+                url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .container {
+            /* background-color: blue; */
+            max-width: 720px;
+            width: 100%;
+            margin: 3.125rem auto 0 auto;
+        }
+
+        .header,
+        h1 p {
+
+            text-align: center;
+        }
+
+        .form-group {
+
+            padding: 0 0.625rem;
+            margin-bottom: 1.875rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header {
+            padding: 0 0.625rem;
+            margin-bottom: 1.875rem;
+        }
+
+        form {
+            padding: 2.5rem;
+        }
+
+        label {
+            /* display: flex; */
+            align-items: center;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        select,
+        button,
+        .main-intel {
+
+            /* display: block; */
+            /* width: 100%; */
+            height: 2.375rem;
+            padding: 0.375rem 0.75rem;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        }
+
+        .main-intel {
+            margin-bottom: 10px;
+        }
+
+        .checkbox {
+
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #submit {
+
+            width: 100%;
+            padding: 0.75rem;
+            background: #37af65;
+            color: inherit;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .input-textarea {
+            min-height: 120px;
+            /* width: 100%; */
+            padding: 0.625rem;
+            /* resize: vertical; */
+        }
+
+        form {
+            background: rgba(27, 27, 50, 0.8);
+            ;
+            /* padding: 2.5rem 0.625rem; */
+            border-radius: 0.25rem;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">freeCodeCamp Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="name" id="name-label">Name </label>
+                <input class="main-intel" type="text" id="name" placeholder="Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" id="email-label">Email</label>
+                <input class="main-intel" type="email" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="number" id="number-label">Age(optional)</label>
+                <input class="main-intel" min="1" max="100" type="number" id="number" placeholder="Number" required>
+            </div>
+
+            <div class="form-group">
+                <p>Which option best describes your current role?</p>
+                <select name="" id="dropdown">
+                    <option value="">Select an ption</option>
+                    <option value="Challenges">Challenges</option>
+                    <option value="Projects">Projects</option>
+                    <!-- <option value="Community">Community</option>
+                      <option value="Open Source">Open Source</option> -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <div><input type="radio" name="radio2" value="Definitely"> Definitely</div>
+                <div><input type="radio" name="radio2" value="Maybe"> Maybe</div>
+
+
+
+            </div>
+
+            <div class="form-group">
+                <p>What is your favorite feature of freeCodeCamp?</p>
+                <select id="most-like" name="mostLike" class="form-control" required="">
+                    <option disabled="" selected="" value="">Select an option</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="openSource">Open Source</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>What would you like to see improved? (Check all that apply)</p>
+                <div class="checkbox"><input type="checkbox" name="" value="Front-end Projects"> Front-end Projects
+                </div>
+                <div class="checkbox"><input type="checkbox" name="" value="Back-end Projects">Back-end Projects</div>
+                <div class="checkbox"><input type="checkbox" name="" value="Data Visualization">Data Visualization</div>
+                <div class="checkbox"><input type="checkbox" name="" value="Challenges">Challenges</div>
+                <div class="checkbox"><input type="checkbox" name="" value="Open Source Community">Open Source Community
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea class="input-textarea" name="" id="submit " cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button id="submit">Subbmit</button>
+            </div>
+
+        </form>
+
+
+    </div>
+</body>
+
+</html>
+<!-- https://survey-form.freecodecamp.rocks/ -->
